@@ -5,6 +5,10 @@ import Services from './pages/Services.jsx'
 import Contact from './pages/Contact.jsx'
 import './App.css'
 import Menu from './pages/Menu.jsx'
+import BlogPage from './pages/BlogPage.jsx'
+import BlogPost from './pages/BlogPost.jsx'
+
+
 
 function App() {
   
@@ -16,6 +20,8 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/services" element={<Services/>} />
+          <Route path="/blog/" element={<BlogPage/>} />
+          <Route path="/blog/:id" element={<BlogPost/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="*" element={<h1>Not found</h1>} />
         </Routes>
