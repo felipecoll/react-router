@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { blogdata } from './blogData';
 
 
@@ -15,6 +15,8 @@ const BlogPage = () => {
     return (
         <>
             <h1>Blog page</h1>
+
+            <Outlet />
 
             <ul>
                 {

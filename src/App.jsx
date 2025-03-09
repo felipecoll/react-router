@@ -20,8 +20,11 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/services" element={<Services/>} />
-          <Route path="/blog/" element={<BlogPage/>} />
-          <Route path="/blog/:id" element={<BlogPost/>} />
+
+          <Route path="/blog" element={<BlogPage />}>
+            <Route path=":id" element={<BlogPost />} />
+          </Route>
+
           <Route path="/contact" element={<Contact/>} />
           <Route path="*" element={<h1>Not found</h1>} />
         </Routes>
