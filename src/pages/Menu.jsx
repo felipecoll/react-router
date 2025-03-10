@@ -6,7 +6,10 @@ const routes = [
     { path: '/about', name: 'About' },
     { path: '/services', name: 'Services' },
     { path: '/blog', name: 'BlogPage' },
-    { path: '/contact', name: 'Contact' }
+    { path: '/contact', name: 'Contact' },
+    { path: '/profile', name: 'Profile' },
+    { path: '/login', name: 'Login' },
+    { path: '/logout', name: 'Logout' }
 ]
 
 const Menu = () => {
