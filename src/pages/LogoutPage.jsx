@@ -14,7 +14,7 @@ return (
     <h1>Logout</h1>
 
     <form onSubmit={logout}>
-      <label>¿SegurO de que quieres salir {auth.user.username}?</label>
+      <label>¿SegurO de que quieres salir?</label>
 
       <button type="submit">Salir</button>
     </form>
