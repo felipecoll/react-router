@@ -10,6 +10,12 @@ function LoginPage () {
         auth.login({ username }); 
     };
 
+    if (auth.user) {
+        return (
+           <Navigate to="/profile" />
+        );
+    }
+
     return (
         <>
             <h1>Login - Bienvenido</h1>

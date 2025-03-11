@@ -1,7 +1,7 @@
 import React from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { AuthProvider } from './pages/auth.jsx'
+import { AuthProvider, AuthRoute } from './pages/auth.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
 import Contact from './pages/Contact.jsx'
@@ -31,9 +31,21 @@ function App() {
             <Route path=":id" element={<BlogPost />} />
           </Route>
 
-          <Route path="/profile" element={<Profile/>} />
+          <Route path="/profile" 
+              element={<AuthRoute>
+                <Profile/>
+              </AuthRoute>} 
+          />
+
           <Route path="/login" element={<LoginPage/>} />
-          <Route path="/logout" element={<LogoutPage/>} />
+
+          <Route path="/logout" 
+              element={<AuthRoute>
+                <LogoutPage/>
+              </AuthRoute>} 
+          />
+
+
           <Route path="/contact" element={<Contact/>} />
           <Route path="*" element={<h1>Not found</h1>} />
         </Routes>
